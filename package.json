@@ -1,41 +1,23 @@
 {
-  "name": "nova-admin",
+  "name": "shop-mall-web-admin",
   "type": "module",
   "version": "0.9.7",
   "private": true,
   "description": "a clean and concise back-end management template based on Vue3, Vite5, Typescript, and Naive UI.",
   "author": {
-    "name": "chansee97",
-    "email": "chen.dev@foxmail.com",
-    "url": "https://github.com/chansee97"
+    "name": "miyou2024",
+    "email": "love@miyou.top",
+    "url": "https://github.com/miyou2024"
   },
   "license": "MIT",
-  "homepage": "https://github.com/chansee97/nova-admin",
+  "homepage": "https://github.com/miyou2024/shop-mall-web-admin",
   "repository": {
-    "url": "https://github.com/chansee97/nova-admin.git"
+    "url": "https://github.com/miyou2024/shop-mall-web-admin.git"
   },
   "bugs": {
-    "url": "https://github.com/chansee97/nova-admin/issues"
+    "url": "https://github.com/miyou2024/shop-mall-web-admin/issues"
   },
-  "keywords": [
-    "Vue",
-    "Vue3",
-    "admin",
-    "admin-template",
-    "vue-admin",
-    "vue-admin-template",
-    "Vite5",
-    "Vite",
-    "vite-admin",
-    "TypeScript",
-    "TS",
-    "NaiveUI",
-    "naive-ui",
-    "naive-admin",
-    "NaiveUI-Admin",
-    "naive-ui-admin",
-    "UnoCSS"
-  ],
+  "keywords": [],
   "scripts": {
     "dev": "vite --mode dev --port 9980",
     "dev:test": "vite --mode test",

@@ -3,7 +3,7 @@ import type { FormInst } from 'naive-ui'
 import { local } from '@/utils'
 import { useAuthStore } from '@/store'
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits([ 'update:modelValue' ])
 
 const authStore = useAuthStore()
 
@@ -34,6 +34,7 @@ const isRemember = ref(false)
 const isLoading = ref(false)
 
 const formRef = ref<FormInst | null>(null)
+
 function handleLogin() {
   formRef.value?.validate(async (errors) => {
     if (errors)
@@ -50,9 +51,11 @@ function handleLogin() {
     isLoading.value = false
   })
 }
+
 onMounted(() => {
   checkUserAccount()
 })
+
 function checkUserAccount() {
   const loginAccount = local.get('loginAccount')
   if (!loginAccount)
@@ -70,15 +73,16 @@ function checkUserAccount() {
     </n-h2>
     <n-form ref="formRef" :rules="rules" :model="formValue" :show-label="false" size="large">
       <n-form-item path="account">
-        <n-input v-model:value="formValue.account" clearable :placeholder="$t('login.accountPlaceholder')" />
+        <n-input v-model:value="formValue.account" clearable :placeholder="$t('login.accountPlaceholder')"/>
       </n-form-item>
       <n-form-item path="pwd">
-        <n-input v-model:value="formValue.pwd" type="password" :placeholder="$t('login.passwordPlaceholder')" clearable show-password-on="click">
+        <n-input v-model:value="formValue.pwd" type="password" :placeholder="$t('login.passwordPlaceholder')" clearable
+                 show-password-on="click">
           <template #password-invisible-icon>
-            <icon-park-outline-preview-close-one />
+            <icon-park-outline-preview-close-one/>
           </template>
           <template #password-visible-icon>
-            <icon-park-outline-preview-open />
+            <icon-park-outline-preview-open/>
           </template>
         </n-input>
       </n-form-item>
@@ -108,17 +112,23 @@ function checkUserAccount() {
     <n-space justify="center">
       <n-button circle>
         <template #icon>
-          <n-icon><icon-park-outline-wechat /></n-icon>
+          <n-icon>
+            <icon-park-outline-wechat/>
+          </n-icon>
         </template>
       </n-button>
       <n-button circle>
         <template #icon>
-          <n-icon><icon-park-outline-tencent-qq /></n-icon>
+          <n-icon>
+            <icon-park-outline-tencent-qq/>
+          </n-icon>
         </template>
       </n-button>
       <n-button circle>
         <template #icon>
-          <n-icon><icon-park-outline-github-one /></n-icon>
+          <n-icon>
+            <icon-park-outline-github-one/>
+          </n-icon>
         </template>
       </n-button>
     </n-space>

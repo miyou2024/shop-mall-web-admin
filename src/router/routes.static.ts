@@ -90,6 +90,16 @@ export const staticRoutes: AppRoute.RowRoute[] = [
     pid: 8,
   },
   {
+    name: 'commodity',
+    path: '/commodity',
+    title: '商品管理',
+    requiresAuth: true,
+    icon: 'carbon:user-avatar-filled-alt',
+    componentPath: '/commodity/index.vue',
+    id: 100,
+    pid: null,
+  },
+  {
     name: 'list',
     path: '/list',
     title: '列表页',
